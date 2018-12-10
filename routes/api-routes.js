@@ -2,7 +2,7 @@ const models = require('../models');
 
 module.exports = function (app) {
 
-  app.get('/api/bamazon', function (req, res) {
+  app.get('/api/products', function (req, res) {
     models.Product.findAll({}).then(function (data) {
       res.json(data);
     }).catch(function (err) {
