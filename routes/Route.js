@@ -47,7 +47,6 @@ class Route {
 
     update(identifier) {
         this.app.put(`/api/${this.resource}/:${identifier}`, (req, res) => {
-            //console.log(req.body);
             this.model.update(req.body, {
                 where: {
                     [identifier]: req.params[identifier]
